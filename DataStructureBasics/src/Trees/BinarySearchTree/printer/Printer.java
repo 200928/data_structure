@@ -1,4 +1,4 @@
-package BinarySearchTree.printer;
+package Trees.BinarySearchTree.printer;
 
 public abstract class Printer {	
 	/**

@@ -1,4 +1,4 @@
-package BinarySearchTree.file;
+package Trees.BinarySearchTree.file;
 
 import java.io.BufferedWriter;
 import java.io.File;

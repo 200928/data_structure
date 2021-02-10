@@ -1,6 +1,6 @@
-package BinarySearchTree;
+package Trees.BinarySearchTree;
 
-import BinarySearchTree.printer.BinaryTreeInfo;
+import Trees.BinarySearchTree.printer.BinaryTreeInfo;
 
 import java.util.Comparator;
 import java.util.LinkedList;

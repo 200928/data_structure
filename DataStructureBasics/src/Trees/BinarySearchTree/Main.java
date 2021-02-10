@@ -1,6 +1,6 @@
-package BinarySearchTree;
+package Trees.BinarySearchTree;
 
-import BinarySearchTree.printer.BinaryTrees;
+import Trees.BinarySearchTree.printer.BinaryTrees;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -55,7 +55,7 @@ public class Main {
         });
     }
 
-    static void test2() {
+    private static void test2() {
          /*
             rand.nextInt(num) 生成 [0, num) <-> [0, num - 1] 随机数
             生成 [begin, end] 随机数
@@ -105,8 +105,8 @@ public class Main {
             }
         });
 
-        System.out.println("\n" + bstInteger.height());
-        System.out.println(bstInteger.height1());
+        System.out.println("\n" + bstInteger.heightRecursive());
+        System.out.println(bstInteger.heightIteration());
         System.out.println(bstInteger.isComplete());
         System.out.println(bstInteger.isCompleteOptimization());
 

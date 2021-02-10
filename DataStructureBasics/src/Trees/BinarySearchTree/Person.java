@@ -1,4 +1,4 @@
-package BinarySearchTree;
+package Trees.BinarySearchTree;
 
 /**
  * @ Author: 范名辉
