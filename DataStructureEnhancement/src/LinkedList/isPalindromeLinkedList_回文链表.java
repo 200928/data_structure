@@ -14,6 +14,7 @@ public class isPalindromeLinkedList_回文链表 {
     static class ListNode {
         int val;
         ListNode next;
+
         ListNode(int x) {
             val = x;
         }
