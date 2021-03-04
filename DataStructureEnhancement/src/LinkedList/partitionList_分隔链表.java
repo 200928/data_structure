@@ -7,7 +7,6 @@ package LinkedList;
  * @ Version: 1.0
  */
 
-// https://leetcode-cn.com/problems/partition-list/
 
 /**
  * Definition for singly-linked list.
@@ -19,6 +18,8 @@ package LinkedList;
  * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
+// https://leetcode-cn.com/problems/partition-list/
 public class partitionList_分隔链表 {
 
     static class ListNode {
