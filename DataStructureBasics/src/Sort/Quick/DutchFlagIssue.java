@@ -23,15 +23,17 @@ public class DutchFlagIssue {
     }
 
     public static void main(String[] args) {
-        int sum = 10;
-        int[] arr = new int[sum];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = new Random().nextInt(10);
-        }
-        System.out.println(Arrays.toString(arr));
-        dutchflagissue1(arr, 5);
-        System.out.println(Arrays.toString(arr));
+//        int sum = 10;
+//        int[] arr = new int[sum];
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = new Random().nextInt(10);
+//        }
+//        System.out.println(Arrays.toString(arr));
+//        dutchflagissue1(arr, 5);
+//        System.out.println(Arrays.toString(arr));
 
+        System.out.println(Integer.toBinaryString(10));
+        System.out.println(Integer.toBinaryString(Float.floatToIntBits(10.6f)));
 
     }
 }
