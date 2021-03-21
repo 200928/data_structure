@@ -1,6 +1,4 @@
-package Chapter_9;
-
-import java.util.Random;
+package Chapter_9其他问题;
 
 /**
  * @ Author: MingHuiFan

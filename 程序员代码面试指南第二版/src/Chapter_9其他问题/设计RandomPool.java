@@ -1,7 +1,6 @@
-package Chapter_9;
+package Chapter_9其他问题;
 
 import java.util.HashMap;
-import java.util.Random;
 
 /**
  * @ Author: MingHuiFan
