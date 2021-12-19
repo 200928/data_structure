@@ -1,4 +1,4 @@
-package com.mh.tree.binarysearchtree;
+package com.mh.tree.bst;
 
 /**
  * @ Author: MingHui Fan
@@ -6,6 +6,8 @@ package com.mh.tree.binarysearchtree;
  * @ Description: com.mh.tree.binarysearchtree
  * @ Version: 1.0
  */
+
+
 public class Person<E> implements Comparable<E> {
     private int age;
     private String name;
@@ -13,16 +15,16 @@ public class Person<E> implements Comparable<E> {
     public int getAge() {
         return age;
     }
-
+    
     public Person(int age) {
         this.age = age;
     }
-
+    
     public Person(int age, String name) {
         this.age = age;
         this.name = name;
     }
-
+    
     @Override
     public int compareTo(E o) {
         return this.age - ((Person<E>) o).age;

@@ -1,8 +1,6 @@
-package com.mh.tree.binarysearchtree;
+package com.mh.tree.bst;
 
 import com.mh.tree.BinaryTree;
-import com.mh.tree.Visitor;
-import com.mh.tree.printer.BinaryTreeInfo;
 
 import java.util.Comparator;
 
@@ -12,13 +10,15 @@ import java.util.Comparator;
  * @ Description: com.mh.tree.binarysearchtree
  * @ Version: 1.0
  */
-public class BinarySearchTree<E> extends BinaryTree<E> implements BinaryTreeInfo {
+public class BST<E> extends BinaryTree<E> {
 
-    BinarySearchTree() {
+    private Comparator<E> comparator;   // 比较器
+
+    BST() {
         this(null);
     }
 
-    BinarySearchTree(Comparator<E> comparator) {
+    BST(Comparator<E> comparator) {
         this.comparator = comparator;
     }
 
@@ -125,48 +125,10 @@ public class BinarySearchTree<E> extends BinaryTree<E> implements BinaryTreeInfo
         return null;
     }
 
-
-    public void preorderTraversal(Visitor<E> visitor) {
-        // 如果传入的 visitor 为空 抛出异常
-        if (visitor == null) {
-            throw new IllegalArgumentException("visitor must not be null");
-        }
-        System.out.print("Preorder Traversal: ");
-        preorderTraversal(root, visitor);
-        System.out.println();
-    }
-
-    public void inorderTraversal(Visitor<E> visitor) {
-        if (visitor == null) {
-            throw new IllegalArgumentException("visitor must not be null");
-        }
-        System.out.print("inorder Traversal: ");
-        inorderTraversal(root, visitor);
-        System.out.println();
-    }
-
-    public void postorderTraversal(Visitor<E> visitor) {
-        if (visitor == null) {
-            throw new IllegalArgumentException("visitor must not be null");
-        }
-        System.out.print("Postorder Traversal: ");
-        postorderTraversal(root, visitor);
-        System.out.println();
-    }
-
-    public void levelOrderTraversal(Visitor<E> visitor) {
-        if (visitor == null) {
-            throw new IllegalArgumentException("visitor must not be null");
-        }
-        System.out.print("Level Order Traversal: ");
-        levelOrderTraversal(root, visitor);
-        System.out.println();
-    }
-
-
     /**
      * 比较器
      */
+    @SuppressWarnings("unchecked")
     private int compare(E e1, E e2) {
         if (comparator != null) {
             return comparator.compare(e1, e2);
@@ -175,38 +137,4 @@ public class BinarySearchTree<E> extends BinaryTree<E> implements BinaryTreeInfo
 //        return (int) ((2 + 1) * Math.random()) - (int) (2 * Math.random());
     }
 
-    /**
-     * 判断元素是否为空
-     */
-    private void elementNotNullCheck(E element) {
-        if (element == null) {
-            throw new IllegalArgumentException("element must not be null");
-        }
-    }
-
-    @Override
-    public Object root() {
-        return root;
-    }
-
-    @Override
-    public Object left(Object node) {
-        return ((Node<E>) node).left;
-    }
-
-    @Override
-    public Object right(Object node) {
-        return ((Node<E>) node).right;
-    }
-
-    @Override
-    public Object string(Object node) {
-//        Node<E> myNode = (Node<E>) node;
-//        String string = "null";
-//        if (myNode.parent != null) {
-//            string = myNode.parent.element.toString();
-//        }
-//        return ((Node<E>) node).element + "_p(" + string + ")";
-        return ((Node<E>) node).element;
-    }
 }

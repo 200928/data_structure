@@ -11,6 +11,7 @@
     <modules>
         <module>RegExp</module>
         <module>Tree</module>
+        <module>JDBC</module>
     </modules>
 
 

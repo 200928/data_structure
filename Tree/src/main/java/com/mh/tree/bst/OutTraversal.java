@@ -1,4 +1,4 @@
-package com.mh.tree.binarysearchtree;
+package com.mh.tree.bst;
 
 import com.mh.tree.Visitor;
 
@@ -14,3 +14,4 @@ public class OutTraversal<E> implements Visitor<E> {
         System.out.print(element + " ");
     }
 }
+

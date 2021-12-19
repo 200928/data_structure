@@ -1,8 +1,9 @@
 package com.mh.tree;
 
 
+import com.mh.tree.printer.BinaryTreeInfo;
+
 import java.util.ArrayDeque;
-import java.util.Comparator;
 import java.util.Queue;
 
 /**
@@ -11,11 +12,12 @@ import java.util.Queue;
  * @ Description: com.mh.tree
  * @ Version: 1.0
  */
-public abstract class BinaryTree<E> {
+public abstract class BinaryTree<E> implements BinaryTreeInfo {
 
     protected int size;   // 节点个数
-    protected Node<E> root;   // 根节点
-    protected Comparator<E> comparator;   // 比较器
+    protected Node<E> root; // 根节点
+
+    private static final String VISITOR_NOT_NULL = "visitor must not be null";
 
     /*========================父类 Tree 的通抽象函数实现========================*/
 
@@ -51,8 +53,17 @@ public abstract class BinaryTree<E> {
         size = 0;
     }
 
+    /**
+     * 判断元素是否为空
+     */
+    protected void elementNotNullCheck(E element) {
+        if (element == null) {
+            throw new IllegalArgumentException("element must not be null");
+        }
+    }
+
     // 前序遍历
-    protected void preorderTraversal(Node<E> node, Visitor<E> visitor) {
+    private void preorderTraversal(Node<E> node, Visitor<E> visitor) {
         if (node == null) {
             return;
         }
@@ -62,7 +73,7 @@ public abstract class BinaryTree<E> {
     }
 
     // 中序遍历
-    protected void inorderTraversal(Node<E> node, Visitor<E> visitor) {
+    private void inorderTraversal(Node<E> node, Visitor<E> visitor) {
         if (node == null) {
             return;
         }
@@ -72,7 +83,7 @@ public abstract class BinaryTree<E> {
     }
 
     // 后序遍历
-    protected void postorderTraversal(Node<E> node, Visitor<E> visitor) {
+    private void postorderTraversal(Node<E> node, Visitor<E> visitor) {
         if (node == null) {
             return;
         }
@@ -82,7 +93,7 @@ public abstract class BinaryTree<E> {
     }
 
     // 层序遍历
-    protected void levelOrderTraversal(Node<E> node, Visitor<E> visitor) {
+    private void levelOrderTraversal(Node<E> node, Visitor<E> visitor) {
         if (node == null) {
             return;
         }
@@ -100,6 +111,44 @@ public abstract class BinaryTree<E> {
             }
         }
     }
+    
+    public void preorderTraversal(Visitor<E> visitor) {
+        // 如果传入的 visitor 为空 抛出异常
+        if (visitor == null) {
+            throw new IllegalArgumentException(VISITOR_NOT_NULL);
+        }
+        System.out.print("Preorder Traversal: ");
+        preorderTraversal(root, visitor);
+        System.out.println();
+    }
+
+    public void inorderTraversal(Visitor<E> visitor) {
+        if (visitor == null) {
+            throw new IllegalArgumentException(VISITOR_NOT_NULL);
+        }
+        System.out.print("inorder Traversal: ");
+        inorderTraversal(root, visitor);
+        System.out.println();
+    }
+
+    public void postorderTraversal(Visitor<E> visitor) {
+        if (visitor == null) {
+            throw new IllegalArgumentException(VISITOR_NOT_NULL);
+        }
+        System.out.print("Postorder Traversal: ");
+        postorderTraversal(root, visitor);
+        System.out.println();
+    }
+
+    public void levelOrderTraversal(Visitor<E> visitor) {
+        if (visitor == null) {
+            throw new IllegalArgumentException(VISITOR_NOT_NULL);
+        }
+        System.out.print("Level Order Traversal: ");
+        levelOrderTraversal(root, visitor);
+        System.out.println();
+    }
+
 
     /**
      * 前驱节点
@@ -268,6 +317,33 @@ public abstract class BinaryTree<E> {
         public boolean hasTowChildren() {
             return left != null && right != null;
         }
+    }
+
+
+    @Override
+    public Object root() {
+        return root;
+    }
+
+    @Override
+    public Object left(Object node) {
+        return ((Node<E>) node).left;
+    }
+
+    @Override
+    public Object right(Object node) {
+        return ((Node<E>) node).right;
+    }
+
+    @Override
+    public Object string(Object node) {
+//        Node<E> myNode = (Node<E>) node;
+//        String string = "null";
+//        if (myNode.parent != null) {
+//            string = myNode.parent.element.toString();
+//        }
+//        return ((Node<E>) node).element + "_p(" + string + ")";
+        return ((Node<E>) node).element;
     }
 
 }
