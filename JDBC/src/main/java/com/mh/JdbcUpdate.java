@@ -16,9 +16,9 @@ import java.util.List;
  */
 public class JdbcUpdate {
     private static String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static String DB_URL = "jdbc:mysql://121.4.26.166/test?characterEncoding=UTF8";
-    private static String USER = "root";
-    private static String PASSWORD = "minghuifan";
+    private static String DB_URL = "jdbc:mysql://121.4.26.166/test?characterEncoding=UTF8&useSSL=false";
+    private static String USER = "info";
+    private static String PASSWORD = "Aoligei2022..";
 
     private static void update(Statement statement, List<String> s) throws SQLException {
         for (String str : s) {

@@ -15,6 +15,7 @@ import java.util.Properties;
  * @ Date: 2021/11/25 - 13:31
  * @ Description: com.mh
  * @ Version: 1.0
+ * 读取配置文件 mysql.properties 连接数据库
  */
 public class JdbcFile {
     public static void main(String[] args) throws IOException {
