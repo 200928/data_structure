@@ -1,4 +1,4 @@
-package com.ming.design.responsibility;
+package com.ming.design.behavior.responsibility;
 
 /**
  * @ Author: MingHui Fan
