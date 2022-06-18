@@ -1,4 +1,4 @@
-package com.mh.regexp;
+package com.ming.regexp;
 
 import org.junit.Test;
 

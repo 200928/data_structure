@@ -4,13 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mh</groupId>
+    <groupId>com.ming</groupId>
     <artifactId>JavaSE_study</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
-        <module>RegExp</module>
-        <module>Tree</module>
         <module>JDBC</module>
+        <module>Mybatis</module>
+        <module>RegExp</module>
+        <module>SpringIoC</module>
+        <module>Practice220530</module>
+        <module>Tree</module>
     </modules>
 </project>
