@@ -1,4 +1,4 @@
-package com.mh.tree.file;
+package com.ming.tree.file;
 
 import java.io.BufferedWriter;
 import java.io.File;

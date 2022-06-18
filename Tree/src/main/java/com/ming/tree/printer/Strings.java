@@ -1,4 +1,4 @@
-package com.mh.tree.printer;
+package com.ming.tree.printer;
 
 public class Strings {
 	public static String repeat(String string, int count) {

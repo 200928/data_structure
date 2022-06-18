@@ -1,8 +1,8 @@
-package com.mh.tree.bst;
+package com.ming.tree.bst;
 
-import com.mh.tree.Visitor;
-import com.mh.tree.file.Files;
-import com.mh.tree.printer.BinaryTrees;
+import com.ming.tree.Visitor;
+import com.ming.tree.file.Files;
+import com.ming.tree.printer.BinaryTrees;
 
 import java.util.Comparator;
 import java.util.Random;

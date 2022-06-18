@@ -1,4 +1,4 @@
-package com.mh.tree.bst;
+package com.ming.tree.bst;
 
 /**
  * @ Author: MingHui Fan

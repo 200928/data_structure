@@ -1,6 +1,6 @@
-package com.mh.tree.bst;
+package com.ming.tree.bst;
 
-import com.mh.tree.Visitor;
+import com.ming.tree.Visitor;
 
 /**
  * @ Author: MingHui Fan

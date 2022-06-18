@@ -1,4 +1,4 @@
-package com.mh.tree;
+package com.ming.tree;
 
 /**
  * @ Author: MingHui Fan

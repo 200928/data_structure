@@ -1,7 +1,7 @@
-package com.mh.tree;
+package com.ming.tree;
 
 
-import com.mh.tree.printer.BinaryTreeInfo;
+import com.ming.tree.printer.BinaryTreeInfo;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
