@@ -13,6 +13,7 @@ class CommonManager extends Manager {
         super(name);
     }
 
+    @Override
     public void RequestApplications(Request request) {
 
         if (request.getRequestType().equals("请假") && request.getNumber() <= 2) {
